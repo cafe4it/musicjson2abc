@@ -247,7 +247,7 @@ function convertXmlToJson(input, id) {
   outputData.measures = [];
 
   var score = input['score-partwise'].part;
-  // console.log(score);
+
   if (score instanceof Array) {
     throw new Error('Multi-Part data is not supported');
   }
@@ -269,7 +269,7 @@ function convertXmlToJson(input, id) {
     });
   }
 
-  return JSON.stringify(outputData);
+  return outputData;
 }
 
 /**
